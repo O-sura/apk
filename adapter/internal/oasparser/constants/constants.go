@@ -163,8 +163,8 @@ const (
 
 	// Semantic Caching related constants
 	SemanticCaching               = "SemanticCache"
-	SemanticCacheEmbeddingAPIKey  = "api_key"
-	SemanticCacheVectorDBPassword = "password"
+	SemanticCacheEmbeddingAPIKey  = "embeddingAPIKey"
+	SemanticCacheVectorDBPassword = "vectorDBPassword"
 
 	// AWS Bedrock Guardrail related constants
 	AWSBedrockGuardrail = "AWSBedrockGuardrail"

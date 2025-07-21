@@ -178,34 +178,34 @@ func NewSemanticCachingPolicy(logger *logging.Logger, inBuiltPolicy dto.InBuiltP
 
 	for key, value := range inBuiltPolicy.GetParameters() {
 		switch key {
-		case "header_name":
+		case "authHeaderName":
 			semanticCachePolicy.embeddingConfig.AuthHeaderName = value
-		case "api_key":
+		case "embeddingAPIKey":
 			semanticCachePolicy.embeddingConfig.APIKey = value
-		case "embedding_endpoint":
+		case "embeddingEndpoint":
 			semanticCachePolicy.embeddingConfig.EmbeddingEndpoint = value
-		case "embedding_provider":
+		case "embeddingProvider":
 			semanticCachePolicy.embeddingConfig.EmbeddingProvider = value
-		case "embedding_model":
+		case "embeddingModel":
 			semanticCachePolicy.embeddingConfig.EmbeddingModel = value
-		case "vector_store_provider":
+		case "vectorDBProvider":
 			semanticCachePolicy.vectorStoreConfig.VectorStoreProvider = value
-		case "embedding_dimention":
+		case "embeddingDimension":
 			semanticCachePolicy.vectorStoreConfig.EmbeddingDimention = value
-		case "threshold":
+		case "similarityThreshold":
 			semanticCachePolicy.vectorStoreConfig.Threshold = value
-		case "db_host":
+		case "vectorDBHost":
 			semanticCachePolicy.vectorStoreConfig.DBHost = value
-		case "db_port":
+		case "vectorDBPort":
 			port, err := strconv.Atoi(value)
 			if err == nil {
 				semanticCachePolicy.vectorStoreConfig.DBPort = port
 			}
-		case "username":
+		case "vectorDBUsername":
 			semanticCachePolicy.vectorStoreConfig.Username = value
-		case "password":
+		case "vectorDBPassword":
 			semanticCachePolicy.vectorStoreConfig.Password = value
-		case "database":
+		case "vectorDBName":
 			semanticCachePolicy.vectorStoreConfig.DatabaseName = value
 		}
 	}
